@@ -1,0 +1,186 @@
+//===========左圖右字區塊===========
+.twoBlockWrap {
+    width: 100%;
+    height: 410px;
+    display: flex;
+    position: relative;
+    @include device-sm{
+        position: static;
+        height: auto;
+         flex-direction: column;
+    }
+
+}
+.twoBlockStart {
+    width: 38%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: 10;
+    @include device-sm{
+        position: static;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.twoBlockEnd {
+    position: absolute;
+    right: 0;
+    height: 410px;
+    width: 62%;
+    background-color: $gray-200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include device-sm{
+        position: static;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        margin-top: -20px;
+        padding:40px  20px ;
+    }
+
+    p {
+        width: 55%;
+        @include device-sm{
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+// ===========關於我們時間軸開合===========
+.accordianWrap {
+    padding-left: 100px;
+    padding-top: 40px;
+    @include device-sm{
+        padding-left: 30px;
+    }
+}
+
+.accordian {
+    background-color: #fff;
+    border-top: 2px solid $primary;
+    padding: 0 32px;
+    position: relative;
+
+    .accordianTitle {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+
+    .accordianContent {
+        border-top: 1px solid $gray-200;
+
+        li {
+            padding-bottom: 20px;
+            display: flex;
+        }
+
+        span {
+            font-family: Poppins, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            padding-right: 37px;
+        }
+
+        p {
+            padding-top: 1px;
+        }
+
+        .material-icons {
+            transition: .5s;
+        }
+
+    }
+}
+
+.accordian::before {
+    //圓點
+    content: "";
+    position: absolute;
+    top: -1%;
+    left: -60px;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $white;
+    border: 2px solid $primary;
+    z-index: 10;
+    @include device-sm{
+        left: -30px;
+    }
+
+}
+
+.accordian::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background-color: $black;
+    top: 0;
+    bottom: 0;
+    left: -50px;
+    @include device-sm{
+        left: -20px;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+//=========== department部門介紹===========
+.departmentLine {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    border-bottom: 1px solid $gray-200;
+    @include device-sm{
+        flex-direction: column;
+        padding: 10px 0;
+        border-bottom: 0;
+    }
+    .departmentA {
+        flex: 1 0 10%;
+        font-size: 20px;
+        font-weight: 500;
+        @include device-sm{
+            background-color: $gray-200;
+            padding: 12px 20px;
+        }
+    }
+
+    .departmentB {
+        // background-color: #afa;
+        flex: 6 0 10%;
+        @include device-sm{
+            padding: 20px ;
+            border-bottom: 1px solid $gray-100;
+        }
+    }
+    .departmentC {
+        flex: 1 0 10%;
+        text-align: end;
+        @include device-sm{
+            text-align: start;
+            padding: 20px  20px 0 20px;
+        }
+    }
+}
+.departmentLine:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    background-color: $gray-200;
+    @include device-sm{
+        display: none;
+        
+    }
+}

@@ -1,0 +1,220 @@
+// ===========主導覽元件===========
+// RWD step ref:https://ithelp.ithome.com.tw/articles/10221079
+// https://codepen.io/echocarriet/pen/yLBKBPa
+.header {
+    background-color: $white;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99999;
+
+    h1 {
+        background-image: url(../images/logo.svg);
+        width: 191px;
+        height: 60px;
+        @include hide-text;
+    }
+}
+
+.menuWrap {
+    display: flex;
+    align-items: center;
+
+    @include device-xl {
+        //手機選單時隱藏
+        display: none;
+
+        width: 100%;
+        height: 100%;
+        height: calc(100vh - 50px);
+        position: absolute;
+        z-index: 100;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+
+    .mainLink {
+        padding: 8px;
+        margin-right: 10px;
+        color: $info;
+        display: inline-block;
+        padding-bottom: 12px;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    @include device-xl {
+        flex-direction: column;
+
+        display: none;
+
+        .mainLink {
+            padding: 12px;
+            margin-right: 0;
+            width: 100vw;
+            text-align: center;
+            color: $primary;
+            font-size: 18px;
+            font-weight: 500;
+
+            &:hover {
+                color: $info;
+            }
+        }
+
+        button {
+            margin: 12px;
+            @include device-sm{
+                margin: 4px;
+            }
+        }
+    }
+}
+
+
+
+.iconLinkWrap {
+    display: flex;
+
+    @include device-xl {
+        flex-direction: column;
+        width: 100%;
+        border-bottom: 1px solid $green-opacity-20;
+        display: none;
+    }
+}
+
+.showMenu {
+    display: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include device-xl {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+// 次導覽改寫
+.subNavWrap {
+    background-color: $green-opacity-20;
+    border-bottom: 1px solid $white;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+
+    //預設hide
+    //display: none;
+    @include device-xl {
+        position: static;
+        height: auto;
+        background-color: transparent;
+    }
+}
+
+.subNavUl {
+    max-width: 1320px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @include device-xl {
+        flex-direction: column;
+    }
+
+    li:nth-child(1) {
+        border-left: 1px solid #fff;
+
+        @include device-xl {
+            border-left: none;
+        }
+    }
+
+    .subLink {
+        display: block;
+
+        padding: 8px 60px;
+        border-right: 1px solid #fff;
+        color: $black;
+
+        @include device-xl {
+            border-right: none;
+        }
+
+        &:hover {
+            background-color: $primary;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+
+    .subLink.active {
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+//主導覽固定在上方的class
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+//sublink 舊的寫法，新的沒問題可刪除本段
+// .subNavLink {
+//     height: 40px;
+//     line-height: 40px;
+//     text-align: center;
+//     border-right: 1px solid #fff;
+
+//     @include device-md {
+//         border: 1px solid #fff;
+//     }
+
+//     a {
+//         display: inline-block;
+//         color: $black;
+//         font-weight: 200;
+//         transition: all 0.8s ease;
+
+//     }
+
+//     a.active {
+//         display: block;
+//         background-color: $primary;
+//         color: $white;
+//     }
+
+//     &:hover {
+//         background-color: $primary;
+//         color: $white;
+//         cursor: pointer;
+//     }
+// }

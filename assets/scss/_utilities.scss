@@ -1,0 +1,411 @@
+// ===========文字===========
+// 字級
+.font-size {
+    &-sm {
+        font-size: $font-size-sm; //14px
+    }
+
+    &-md {
+        font-size: $font-size-base; //16px
+    }
+
+    &-lg {
+        font-size: $font-size-lg; //20px
+    }
+}
+
+.bannerFontSize {
+    font-size: $bannerText;
+
+    @include device-sm {
+        font-size: 44px;
+    }
+}
+
+//字重
+.fwLighter {
+    font-weight: $font-weight-lighter;
+}
+
+.fwRegular {
+    font-weight: 400;
+}
+
+.fwMedium {
+    font-weight: 500;
+}
+
+//行高
+.lineheightSM {
+    line-height: 1.25;
+}
+
+//字體
+.engFontPoppins {
+    font-family: Poppins, sans-serif;
+}
+
+.engFontRoboto {
+    font-family: Roboto, sans-serif;
+}
+
+.notoSansTc {
+    font-family: "Noto Sans CJK TC";
+}
+
+// 文字陰影
+.text-shadowSM {
+    text-shadow: 0 .25rem .25rem rgba(0, 0, 0, 0.25);
+}
+
+.text-shadowMD {
+    text-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.25);
+}
+
+// 陰影
+.shadowSM {
+    box-shadow: 0 .25rem .25rem rgba(0, 0, 0, 0.25);
+}
+
+.shadowMD {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.25);
+}
+
+// ===========ul 樣式有點點===========
+.list-style-disc {
+    list-style-type: disc;
+}
+
+// ===========顏色===========
+// 文字色
+.text-black20 {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.text-black50 {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.text-white {
+    color: $white;
+}
+
+// 背景色
+
+.bg-gray200 {
+    background: $gray-200;
+}
+
+.bgLightgreen {
+    background-color: $light-green;
+}
+
+.bgDarkgreen {
+    background-color: #334B41;
+}
+
+.bg-white50 {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.bgBlack50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(0deg, darken($primary, 10%), darken($primary, 5%));
+}
+
+.bg-gradient-primaryY {
+    background: linear-gradient(180deg, $primary, $secondary);
+}
+
+.bg-gradient-primaryY60 {
+    background: linear-gradient(180deg, rgba(0, 178, 161, 0.6), rgba(131, 93, 208, 0.6));
+}
+
+// ===========link style===========
+// BS按鈕改寫
+.btnPrimary {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover {
+        color: $white;
+        background-color: $info;
+        border-color: $info;
+    }
+}
+
+.btnSecondary {
+    color: $white;
+    background-color: $secondary;
+    border-color: $secondary;
+
+    &:hover {
+        color: $white;
+        background-color: $info;
+        border-color: $info;
+    }
+}
+
+.btnOutlineWhite {
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+        color: $info;
+        background-color: $white;
+        border-color: $white;
+    }
+}
+
+.primaryLink {
+    color: $primary;
+
+    &:hover {
+        color: $info;
+    }
+}
+
+.infoLink {
+    color: $info;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.blackLink {
+    color: $black;
+    display: inline-block;
+    margin-bottom: 10px;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.whiteLink {
+    color: $white;
+
+    &:hover {
+        color: darken($white, 10%);
+    }
+}
+
+.blackLinkUnderline {
+    color: $black;
+    background-image: linear-gradient($black, $black);
+    background-position: left bottom;
+    background-size: 0 2.5px;
+    background-repeat: no-repeat;
+    transition: background-size 0.15s linear;
+
+    &:hover {
+        color: $black;
+        background-size: 100% 2.5px;
+    }
+}
+
+.blackBlockLink {
+    color: $white;
+    background-color: $black;
+    display: block;
+    text-align: center;
+
+    &:hover {
+        color: $white;
+        background-color: $primary;
+    }
+}
+
+// 區塊按鈕
+.blockBtn {
+    display: inline-block;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+    transition: all 1s ease;
+    padding: 28px 0;
+    color: $black;
+}
+
+.bgPrimary50 {
+    background: rgba(0, 178, 161, 0.5);
+    background: linear-gradient(to right, rgba(0, 178, 161, 0.5) 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all 0.8s ease;
+
+    &:hover {
+        color: $white;
+        background-position: bottom right;
+    }
+}
+
+.bgPrimary60 {
+    background: rgba(0, 178, 161, 0.6);
+    background: linear-gradient(to right, rgba(0, 178, 161, 0.6) 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+
+    transition: all 0.8s ease;
+
+    &:hover {
+        color: $white;
+        background-position: bottom right;
+    }
+}
+
+.bgPrimary70 {
+    background: rgba(0, 178, 161, 0.7);
+    background: linear-gradient(to right, rgba(0, 178, 161, 0.7) 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+
+    transition: all 0.8s ease;
+
+    &:hover {
+        color: $white;
+        background-position: bottom right;
+    }
+}
+
+.primaryBlockLink {
+    color: $black;
+    background-color: $primary;
+
+    &:hover {
+        color: $primary;
+        background-color: $black;
+    }
+}
+
+//===========border===========
+.borderWhite20 {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.borderM-Gray200 {
+    border-bottom: 1px solid $gray-200;
+}
+
+//===========寬度===========
+.w90px {
+    width: 90px;
+}
+
+.w160px {
+    width: 160px;
+}
+
+.w30per {
+    width: 30%;
+}
+
+.w60per {
+    width: 60%;
+}
+
+.w80per {
+    width: 80%;
+}
+
+.max-w80per {
+    max-width: 80%;
+}
+
+.w80per-lg {
+    @include device-lg {
+        width: 80%;
+    }
+}
+
+.w90per-sm {
+    @include device-sm {
+        width: 90%;
+    }
+}
+
+// ===========高度===========
+.h500px {
+    height: 500px;
+}
+
+//===========首頁 照片縮放transform效果===========
+.photoTransform {
+    height: 200px;
+    overflow: hidden;
+
+    img {
+        transform: scale(1, 1);
+        transition: all 0.5s ease-out;
+    }
+
+    img:hover {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+// ===========清除浮動===========
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+//===========標題字隱藏===========
+// 單行
+.single-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 多行
+.multiline-ellipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+// ===========news內頁的水平線樣式===========
+.contentTitle {
+    position: relative;
+}
+
+.borderBtmPrimary:after {
+    position: absolute;
+    content: "";
+    height: 4px;
+    bottom: 0;
+    background: $primary;
+    width: 50%;
+    left: 25%;
+}
+
+
+// ===========首頁搜尋框樣式===========
+.inputWrap {
+    background-color: $white;
+    border: 1px solid $green-opacity-20;
+    margin: 30px 0 20px 0;
+    padding: 20px 12px;
+    display: flex;
+    justify-content: space-between;
+@include device-sm{
+    margin: 12px 0 8px 0;
+    padding: 12px 8px;
+}
+    input:focus {
+        outline: none;
+    }
+}
+
+.inputStyle {
+    border: none;
+}
+
+

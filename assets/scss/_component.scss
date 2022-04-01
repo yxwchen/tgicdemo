@@ -1,0 +1,940 @@
+//===========首頁banner元件===========
+.indexBannerWrap {
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    // img {
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    // }
+
+    @include device-sm {
+        height: 100vh;
+    }
+}
+
+.indexBn {
+    width: 100%;
+    height: 75vh;
+    background: url('../images/index_banner2.jpg') no-repeat center;
+    // transition: opacity 2s linear,background 6s ease-out;
+    // opacity: 0;
+    //background-position: -225px -300px;
+
+    animation: indexMove 10s linear;
+    animation-fill-mode: forwards;
+
+    @include device-md {
+        animation: indexMove-md 5s linear;
+        animation-fill-mode: forwards;
+    }
+
+    @include device-sm {
+        height: 100vh;
+    }
+}
+
+.indexBannerTextWrap {
+    color: #fff;
+    position: absolute;
+    text-align: left;
+    top: 25%;
+    left: 165px;
+
+    p {
+        font-size: 16px;
+    }
+
+    @include device-sm {
+        top: 84px;
+        left: 40px;
+    }
+}
+
+// ===========首頁大圖往下箭頭元件===========
+.arrowDownWrap {
+    display: none;
+
+    @include device-sm {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        z-index: 100;
+    }
+}
+
+.arrow-down {
+    animation: bounce-down 1s infinite alternate;
+    -webkit-animation: bounce-down 1s infinite alternate;
+}
+
+// ===========首頁三圈圈區塊元件===========
+.circleWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: url(../images/indexLineBg.svg) no-repeat bottom;
+
+    @include device-sm {
+        flex-direction: column;
+    }
+}
+
+.circle {
+    background: #EaEBF080;
+    color: $black;
+    padding: 3%;
+    margin: 0 -15px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.circle-lg {
+    min-width: 530px;
+    width: 530px;
+    height: 530px;
+    z-index: 10;
+
+    @include device-xl {
+        padding-top: 60px;
+        min-width: 450px;
+        width: 450px;
+        height: 450px;
+    }
+
+    @include device-lg {
+        padding-top: 60px;
+        min-width: 400px;
+        width: 400px;
+        height: 400px;
+    }
+
+    @include device-sm {
+        padding-top: 40px;
+        min-width: 300px;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.circle-sm {
+    margin-top: 180px;
+    min-width: 350px;
+    width: 350px;
+    height: 350px;
+
+    @include device-xxl {
+        padding-top: 4%;
+    }
+
+    @include device-xl {
+        padding-top: 5%;
+        min-width: 280px;
+        width: 280px;
+        height: 280px;
+    }
+
+    @include device-lg {
+        padding-top: 3%;
+        min-width: 215px;
+        width: 215px;
+        height: 215px;
+    }
+
+    @include device-md {
+        display: none;
+    }
+}
+
+// ===========首頁 portfolioWrap 裡面的card設定===========
+.portfolioWrap {
+    background-image: url(../images/portfolioBg.png);
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    min-height: 788px;
+    padding-bottom: 60px;
+}
+
+.portfolioListWrap {
+    background-image: url(../images/portfolioBg.png);
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    min-height: 788px;
+
+    @include device-md {
+        background-color: #334b41;
+    }
+}
+
+.portfolioBody .card {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.portfolioBody .card-body {
+    padding: 0;
+}
+
+.portfolioBody .card-subtitle {
+    font-weight: 200;
+    font-size: $font-size-sm;
+    opacity: 0.5;
+    color: $white;
+    font-family: Poppins, sans-serif;
+}
+
+// 線框按鈕動畫
+.borderBtn {
+    position: relative;
+    display: inline-block;
+    padding: 24px 32px;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+
+    .card-title {
+        height: 50px;
+        margin: 10px 0;
+        color: $primary;
+    }
+
+    .card-text {
+        color: $white;
+        font-weight: 200;
+        height: 100px;
+    }
+
+    @include device-sm {
+        padding: 10px;
+    }
+
+}
+
+.borderBtn.btn-border-4::after,
+.borderBtn.btn-border-4::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    transition: .5s;
+}
+
+.borderBtn.btn-border-4::after {
+    top: 0px;
+    left: 0px;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+
+.borderBtn.btn-border-4::before {
+    bottom: 0px;
+    right: 0px;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.borderBtn.btn-border-4:hover::after,
+.borderBtn.btn-border-4:hover::before {
+    width: 100%;
+    height: 100%;
+    border-color: $white;
+}
+
+//===========首頁 event元件===========
+.eventBody .card {
+    border: none;
+    border-radius: 0;
+}
+
+.eventBody .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    // 圖片card等高
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+
+.eventBody .card-body {
+    padding: 0;
+}
+
+.eventBody a {
+    display: block;
+
+    .card-date {
+        font-size: $font-size-sm;
+        font-weight: 200;
+        font-family: Poppins, sans-serif;
+        color: $black;
+        margin-top: 10px;
+    }
+
+    .card-subtitle {
+        font-weight: 200;
+        margin: 10px 0;
+        font-size: 16;
+    }
+
+    .card-title {
+        font-size: $font-size-lg;
+        font-weight: 500;
+        color: $black;
+    }
+}
+
+//===========首頁 pageTitle===========
+.pageTitle {
+    color: $black;
+    margin-bottom: 28px;
+
+    p {
+        color: $primary;
+    }
+
+    p.text-white {
+        color: $white;
+    }
+}
+
+.pageNumWrap {
+    position: relative;
+    //background-color: #caf;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+
+    .pageNum::after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        top: 50%;
+        background: $primary;
+        width: 20%;
+        margin-left: 20px;
+    }
+
+    .pageNum2::after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        top: 50%;
+        background: $white;
+        width: 20%;
+        margin-left: 20px;
+    }
+}
+
+
+//===========首頁 news===========
+.newsLeft {
+    flex: 1 1 0%;
+    color: $black;
+    //margin-bottom: 20px;
+}
+
+.newsRight {
+    flex: 8 1 0%;
+    display: flex;
+    align-items: center;
+
+    //margin-bottom: 20px;
+    @include device-sm {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}
+
+.newsBody .card-date {
+    font-family: Poppins, sans-serif;
+    font-weight: 200;
+    font-size: $font-size-sm;
+}
+
+.newsBody .card-subtitle {
+    flex: 1 1 0%;
+    text-align: center;
+    font-weight: 200;
+
+    @include device-sm {
+        padding-left: 20px;
+    }
+}
+
+.newsBody .card-title {
+    flex: 5 1 0%;
+    color: $black;
+    font-size: $font-size-lg;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+//underline 特效try
+.animationLineBtn {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    color: $black;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.newsBody .btn_underline::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    width: 0;
+    background-color: $black;
+    transition: .3s;
+}
+
+.newsBody .btn_underline:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+// ===========footer ul元件===========
+.footerSecUl {
+    padding: 8px 0;
+
+    li {
+        padding-bottom: 4px;
+        font-size: $font-size-sm;
+        font-weight: 200;
+
+        @include device-md {
+            display: inline-block;
+            //background-color: #aca;
+            width: 100px;
+        }
+    }
+
+    a {
+        color: $black;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+footer h5 {
+    padding: 8px 0;
+
+    @include device-md {
+        color: $primary;
+        width: 120px;
+    }
+}
+
+.footerFB {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+
+    @include device-md {
+        bottom: 3%;
+        right: 6%;
+    }
+}
+
+//===========各分頁banner元件===========
+.bannerWarp {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include device-sm {
+        height: 120px;
+    }
+}
+
+.aboutBn {
+    background: url("../images/aboutBn.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // contain 是在不超過原圖的大小前提下等比縮小
+    //cover 是等比例縮放，讓圖片可以蓋滿元素寬高。  
+}
+
+.recruitBn {
+    background: url("../images/recruitBn.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tenderBn {
+    background: url("../images/tenderBn.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.eventBn {
+    background: url("../images/eventBn.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.newsBn {
+    background: url("../images/newsBn.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portfolioBn {
+    background: url("../images/portfolioBn.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.serviceBn {
+    background: url("../images/serviceBn.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gisBn {
+    background: url("../images/gisBn.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+// pagination
+.customPagination {
+    font-family: Poppins, sans-serif;
+    font-weight: 200;
+
+    .page-link {
+        border: none;
+        color: $black;
+        background-color: transparent;
+    }
+
+    .active {
+        color: $primary;
+    }
+
+    .page-link:hover,
+    .page-link:focus {
+        color: $primary;
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+
+// paginationDark
+.customPaginationDark {
+    font-family: Poppins, sans-serif;
+    font-weight: 200;
+
+    .page-link {
+        border: none;
+        color: $white;
+        background-color: transparent;
+    }
+
+    .active {
+        color: $primary;
+    }
+
+    .page-link:hover,
+    .page-link:focus {
+        color: $primary;
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+
+// 文章分享連結
+.shareLinkWrap {
+    position: absolute;
+    right: 0;
+    top: 15%;
+
+    .shareLink {
+        color: $white;
+        background: $secondary;
+        padding: 20px;
+        border-radius: 50% 0% 0% 50%;
+
+        &:hover {
+            color: $secondary;
+            background: $gray-100;
+        }
+    }
+
+    @include device-sm {
+        top: 1%;
+    }
+}
+
+// 新聞內頁圖片輪播slider
+.swiperBg {
+    display: flex;
+
+    .left {
+        background: url("/assets/images/newsPhoto1.png");
+        background-position: center right;
+        width: 10vw;
+        opacity: 30%;
+    }
+
+    .right {
+        background: url("/assets/images/newsPhoto1.png");
+        background-position: center left;
+        width: 10vw;
+        opacity: 30%;
+    }
+}
+
+.swiperWrap {
+    width: 80vw;
+    height: 400px;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+// .swiperHeight{
+//     height: 400px;
+//     @include device-xl{
+//         height: 300px;
+//     }
+// }
+// .swiperTextWrap{
+//     background-color: #faa;
+//     top:0;
+//     position:absolute;
+//     text-align: left;
+//     padding: 0 60px;
+//     .text {
+//         background-color:rgba(0, 0, 0, 0.6);
+//         color: #fff;
+//         margin: 140px 0 0 0;
+//         padding: 20px;
+//         text-align: center;
+//         @include device-xxl{
+//             margin: 60px 0 0 0;
+//         }
+//         @include device-lg{
+//             margin: 40px 0 0 0;
+//         }
+//         @include device-sm{
+//             display: none;
+//         }
+
+//     }
+// }
+
+// 相關連結頁 ul樣式
+.linkWrap {
+    margin: 0 auto;
+    width: 80%;
+
+    li {
+        padding: 8px 40px;
+    }
+
+    li:nth-child(odd) {
+        background-color: $light-green200;
+    }
+
+    li:nth-child(even) {
+        background-color: $light-green;
+    }
+
+    h5 {
+        display: inline-block;
+        padding-right: 20px;
+
+        @include device-sm {
+            padding-right: 0;
+        }
+    }
+
+    a,
+    p {
+        display: inline-block;
+        color: $black;
+        font-weight: 200;
+
+    }
+}
+
+// 客製化表單樣式-聯絡我們
+.customForm {
+    .form-control {
+        background-color: $gray-200;
+        border: 1px solid $gray-200;
+        border-radius: 0;
+    }
+}
+
+//portfolio燈箱樣式
+//ref https://codepen.io/sachinchoolur/pen/qNyvGW 
+
+.demo-gallery>ul {
+    margin-bottom: 0;
+    padding-left: 15px;
+}
+
+.demo-gallery>ul>li {
+    //margin-bottom: 15px;
+    width: 180px;
+    display: inline-block;
+    margin-right: 15px;
+    list-style: outside none none;
+}
+
+.demo-gallery>ul>li a {
+    border: 3px solid #FFF;
+    // border-radius: 3px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+
+.demo-gallery>ul>li a>img {
+    -webkit-transition: -webkit-transform 0.15s ease 0s;
+    -moz-transition: -moz-transform 0.15s ease 0s;
+    -o-transition: -o-transform 0.15s ease 0s;
+    transition: transform 0.15s ease 0s;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    height: 100%;
+    width: 100%;
+}
+
+.demo-gallery>ul>li a:hover>img {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.demo-gallery>ul>li a:hover .demo-gallery-poster>img {
+    opacity: 1;
+}
+
+.demo-gallery>ul>li a .demo-gallery-poster {
+    background-color: rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: background-color 0.15s ease 0s;
+    -o-transition: background-color 0.15s ease 0s;
+    transition: background-color 0.15s ease 0s;
+}
+
+.demo-gallery>ul>li a .demo-gallery-poster>img {
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: opacity 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+}
+
+.demo-gallery>ul>li a:hover .demo-gallery-poster {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.demo-gallery .justified-gallery>a>img {
+    -webkit-transition: -webkit-transform 0.15s ease 0s;
+    -moz-transition: -moz-transform 0.15s ease 0s;
+    -o-transition: -o-transform 0.15s ease 0s;
+    transition: transform 0.15s ease 0s;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    height: 100%;
+    width: 100%;
+}
+
+.demo-gallery .justified-gallery>a:hover>img {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.demo-gallery .justified-gallery>a:hover .demo-gallery-poster>img {
+    opacity: 1;
+}
+
+.demo-gallery .justified-gallery>a .demo-gallery-poster {
+    background-color: rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: background-color 0.15s ease 0s;
+    -o-transition: background-color 0.15s ease 0s;
+    transition: background-color 0.15s ease 0s;
+}
+
+.demo-gallery .justified-gallery>a .demo-gallery-poster>img {
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: opacity 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+}
+
+.demo-gallery .justified-gallery>a:hover .demo-gallery-poster {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.demo-gallery .video .demo-gallery-poster img {
+    height: 48px;
+    margin-left: -24px;
+    margin-top: -24px;
+    opacity: 0.8;
+    width: 48px;
+}
+
+.demo-gallery.dark>ul>li a {
+    border: 3px solid #04070a;
+}
+
+// col等高解決方法 https://stackoverflow.com/questions/19695784/how-can-i-make-bootstrap-columns-all-the-same-height
+// bs row 等高
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.display-flex>[class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+//GIS card客制設計
+#trend .card {
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0;
+    margin: 10px;
+
+    // padding: 6px;
+    h5 {
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .card-text {
+        font-weight: 200;
+        padding-bottom: 30px;
+    }
+}
+
+#indexAbout .card {
+    border-radius: 0;
+    border: 0;
+    margin: 20px;
+    text-align: center;
+
+    img {
+        max-width: 70%;
+        margin: 0 auto;
+
+        @include device-md {
+            max-width: 100%;
+        }
+    }
+
+    h5 {
+        padding-bottom: 40px;
+
+        @include device-sm {
+            padding-bottom: 20px;
+        }
+    }
+
+    .card-text {
+        text-align: left;
+    }
+}
+
+// gotoTop元件
+// https://codepen.io/mariordev/pen/PNmZzG
+.c-go-top {
+    background: none repeat scroll 0 0 padding-box #C3CDE0;
+    padding: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    display: none;
+    position: fixed;
+    right: 2%;
+    text-decoration: none;
+    z-index: 1000;
+
+    @include device-sm {
+        padding: 10px;
+    }
+}

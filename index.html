@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>財團法人台灣地理資訊中心</title>
+  <link rel="stylesheet" href="./assets/scss/all.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- jQ -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- 數字滾動 -->
+  <script src="https://cdn.jsdelivr.net/countupjs/1.8.5/countUp.min.js"></script>
+
+</head>
+
+<body>
+  <!-- banner -->
+  <div class="mx-auto indexBannerWrap">
+    <div class="indexBn"></div>
+    <div class="indexBannerTextWrap">
+      <h2 class="bannerFontSize text-shadowSM">圖解這片土地<br>的過去與未來</h2>
+      <h5 class="my-7">國土規劃<span class="d-inline-block px-2">|</span>政策智庫<span class="d-inline-block px-2">|</span>系統開發
+      </h5>
+      <p>
+        台灣地理資訊中心率領資訊整合團隊<br>
+        持續輔助國家擬定政策發展<br>
+        迎向數位科技時代 </p>
+    </div>
+    <div class="arrowDownWrap">
+      <span class="material-icons md-48 text-white arrow-down">
+        keyboard_arrow_down
+      </span>
+    </div>
+  </div>
+  <!-- /.banner -->
+  <!-- mainNav -->
+  <nav id="navbar" class="header">
+    <a href="index.html"><h1>台灣地理資訊中心</h1></a>
+    <div class="menuWrap">
+      <ul class="menu">
+        <li><a href="about.html" class="mainLink">關於中心</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="about.html#tgic" class="subLink active">創立宗旨</a></li>
+              <li><a href="about.html#history" class="subLink">歷史沿革</a></li>
+              <li><a href="about.html#organization" class="subLink">組織架構</a></li>
+              <li><a href="./bulletin.html" class="subLink">中心公告</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="gis.html" class="mainLink"><span class="engFontPoppins">GIS</span>介紹</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="gis.html#application" class="subLink active">GIS應用</a></li>
+              <li><a href="gis.html#feature" class="subLink">GIS特色</a></li>
+              <li><a href="gis.html#trend" class="subLink">GIS發展趨勢</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="service.html" class="mainLink">服務項目</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="service.html#think" class="subLink active">智庫幕僚</a></li>
+              <li><a href="service.html#talent" class="subLink">人才培育</a></li>
+              <li><a href="service.html#research" class="subLink">技術研發</a></li>
+              <li><a href="service.html#process" class="subLink">資料處理</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="portfoliolist.html" class="mainLink">成果展示</a>
+          <div class="subNavWrap">
+            <ul class="subNavUl">
+              <li><a href="portfoliolist.html" class="subLink active">全部</a></li>
+              <li><a href="portfoliolist.html" class="subLink">數位應用處</a></li>
+              <li><a href="portfoliolist.html" class="subLink">空間資訊處</a></li>
+              <li><a href="portfoliolist.html" class="subLink">技術服務處</a></li>
+              <li><a href="portfoliolist.html" class="subLink">政策發展處</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="eventlist.html" class="mainLink">活動課程</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="eventlist.html" class="subLink active">全部</a></li>
+              <li><a href="eventlist.html" class="subLink">研討會活動</a></li>
+              <li><a href="eventlist.html" class="subLink">課程訊息</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="newslist.html" class="mainLink">最新消息</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="eventlist.html" class="subLink active">全部</a></li>
+              <li><a href="eventlist.html" class="subLink">新聞稿</a></li>
+              <li><a href="eventlist.html" class="subLink">GIS新知</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="contact.html" class="mainLink">聯絡我們</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="contact.html" class="subLink active">FAQ</a></li>
+              <li><a href="contact.html" class="subLink">聯絡表單</a></li>
+              <li><a href="contact.html" class="subLink">廉潔檢舉信箱</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="me-0 me-xl-2">
+          <button type="button" class="btn btnPrimary fwLighter rounded-pill w90px">人才招幕</button>
+        </li>
+        <li><button type="button" class="btn btnSecondary fwLighter rounded-pill w90px">公開招標</button></li>
+      </ul>
+      <div class="iconLinkWrap">
+        <div>
+          <a class="infoLink px-2 engFontPoppins" href="">English</a>
+          <a class="infoLink px-2" href="https://www.facebook.com/hitgic" target="_blank"><svg
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+            </svg></a>
+        </div>
+        <div class="inputWrap d-xl-none d-xxl-none">
+          <input type="text" class="inputStyle w-75 d-block d-xl-none" placeholder="地方創生">
+          <div>
+            <a href="#"><span class="material-icons">
+                close
+              </span></a>
+            <a href="#"><img src="./assets/images/arrow.svg" alt=""></a>
+          </div>
+        </div>
+
+        <a class="infoLink px-2 d-none d-xl-inline-block" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></a>
+      </div>
+    </div>
+    <a class="showMenu infoLink">
+      <span class="material-icons md-36">
+        menu
+      </span>
+    </a>
+  </nav>
+  <!-- /.mainNav -->
+  <!-- gotoTop -->
+  <a href="#" id="c-go-top" class="c-go-top">
+    <img src="./assets/images/goTop.svg" alt="">
+  </a>
+  <!-- /.gotoTop -->
+  <!-- 關於 -->
+  <section id="indexAbout" class="container mt-7 mb-15">
+    <div class="card-group">
+      <div class="card">
+        <img src="./assets/images/indexSvg01.svg" alt="">
+        <div class="card-body">
+          <h2 class="h1 engFontPoppins">ABOUT</h2>
+          <h5 class="">關於中心</h5>
+          <p class="card-text">
+            財團法人台灣地理資訊中心，係由國發會於民國 52
+            年成立之研究機構，專注於空間地理資訊的整合與圖像化平台，以支援官產學界在經濟、社會、產業、人力、國土、政府治理等各方面的應用。</p>
+        </div>
+        <a href="about.html"
+          class="btn btn-outline-info mx-auto rounded-pill engFontPoppins fwLighter mt-4 py-2 px-6 w160px">View
+          more</a>
+      </div>
+      <div class="card">
+        <img src="./assets/images/indexSvg02.svg" alt="">
+        <div class="card-body">
+          <h2 class="h1 engFontPoppins">SERVICE</h2>
+          <h5 class="card-title">服務項目</h5>
+          <p class="card-text">
+            <ul>
+              <li>智庫幕僚｜推動、輔導、產業媒合之行政幕僚</li>
+              <li>人才培育｜增加多面向產業專業人才培育課程</li>
+              <li>技術研發｜空間資訊整合、分析，平台規劃等</li>
+              <li>資料處理｜全國戶政資料建檔、地理資料建置</li>
+            </ul>
+          </p>
+        </div>
+        <a href="service.html"
+          class="btn btn-outline-info mx-auto rounded-pill engFontPoppins fwLighter mt-4 py-2 px-6 w160px">View
+          more</a>
+      </div>
+    </div>
+  </section>
+  <!-- /.關於 -->
+  <!-- 實戰數據 -->
+  <section class="bg-gradient-primaryY60 circleBg">
+    <div class="circleWrap py-6">
+      <div class="circle circle-sm">
+        <ul class="font-size-lg">
+          <li><span class="h1" id="number1"></span>年</li>
+          <li class="mb-lg-5 mb-xl-7">專業地理資訊累積</li>
+          <li><span class="h1" id="number2"></span>個</li>
+          <li>國土資訊系統</li>
+        </ul>
+      </div>
+      <div class="circle circle-lg">
+        <h1 class="mb-lg-5 mb-xl-7">我們的實戰數據</h1>
+        <p class="mb-lg-5 mb-xl-7 w80per w100-sm mx-auto">台灣地理資訊中心在國土資訊系統與 GIS 空間系統分析上，擁有卓越的成績， 提供政府與民間企業進行有效的決策。</p>
+        <ul class="font-size-lg">
+          <li><span class="h1" id="number3"></span>位</li>
+          <li class="mb-lg-5 mb-xl-7">以上專業技術幕僚提供協助</li>
+          <li><span class="h1" id="number4"></span>筆</li>
+          <li>統計與資料分析</li>
+        </ul>
+      </div>
+      <div class="circle circle-sm">
+        <ul class="font-size-lg">
+          <li><span class="h1" id="number5"></span>件</li>
+          <li class="mb-lg-5 mb-xl-7">專案執行</li>
+          <li><span class="h1" id="number6"></span>個</li>
+          <li>都市發展系統</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- /.實戰數據 -->
+  <!-- portfolio -->
+  <section class="portfolioWrap">
+    <div class="container pt-15">
+      <div class="d-flex justify-content-between align-items-center mb-7">
+        <h2
+          class="text-white engFontPoppins h1 fwMedium d-flex flex-column flex-sm-column flex-md-row align-items-start align-items-md-center">
+          PORTFOLIO<span class="h5 d-inline-block ms-md-5 ms-0">成果展示</span></h2>
+        <a href="./portfoliolist.html"
+          class="btn btn-outline-white rounded-pill engFontPoppins fwLighter py-2 px-6">View more</a>
+      </div>
+      <div class="portfolioBody row row-cols-2 row-cols-md-3 row-cols-lg-4 g-0">
+        <div class="col">
+          <div class="card">
+            <a href="#" class="borderBtn btn-border-4">
+              <div class="card-body">
+                <h6 class="card-subtitle">2021.12</h6>
+                <h5 class="card-title multiline-ellipsis">文化部測試標題字測試標題字測試標題字測試標題字測試標題字</h5>
+                <p class="card-text multiline-ellipsis">國家文化記憶庫榮民與眷村主題「眷遊食光」成果網站測試標題字測試標題字測試標題字</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="#" class="borderBtn btn-border-4">
+              <div class="card-body">
+                <h6 class="card-subtitle">2021.12</h6>
+                <h5 class="card-title multiline-ellipsis">財團法人國土規畫及不動產資訊中心</h5>
+                <p class="card-text">109年度總統府原住民歷史正義與轉型正義委員會數位檔案資源導入國家文化記憶庫</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="#" class="borderBtn btn-border-4">
+              <div class="card-body">
+                <h6 class="card-subtitle">2021.12</h6>
+                <h5 class="card-title multiline-ellipsis">文化部</h5>
+                <p class="card-text">國家文化記憶庫榮民與眷村主題「眷遊食光」成果網站</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="#" class="borderBtn btn-border-4">
+              <div class="card-body">
+                <h6 class="card-subtitle">2021.12</h6>
+                <h5 class="card-title multiline-ellipsis">文化部</h5>
+                <p class="card-text">國家文化記憶庫榮民與眷村主題「眷遊食光」成果網站</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="#" class="borderBtn btn-border-4">
+              <div class="card-body">
+                <div class="card-subtitle">2021.12</div>
+                <h5 class="card-title multiline-ellipsis">文化部</h5>
+                <p class="card-text">國家文化記憶庫榮民與眷村主題「眷遊食光」成果網站</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="#" class="borderBtn btn-border-4">
+              <div class="card-body">
+                <div class="card-subtitle">2021.12</div>
+                <h5 class="card-title multiline-ellipsis">文化部</h5>
+                <p class="card-text">國家文化記憶庫榮民與眷村主題「眷遊食光」成果網站</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="#" class="borderBtn btn-border-4">
+              <div class="card-body">
+                <div class="card-subtitle">2021.12</div>
+                <h5 class="card-title multiline-ellipsis">文化部</h5>
+                <p class="card-text">國家文化記憶庫榮民與眷村主題「眷遊食光」成果網站</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="#" class="borderBtn btn-border-4">
+              <div class="card-body">
+                <div class="card-subtitle">2021.12</div>
+                <h5 class="card-title multiline-ellipsis">文化部</h5>
+                <p class="card-text">國家文化記憶庫榮民與眷村主題「眷遊食光」成果網站</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.portfolio -->
+  <!-- event -->
+  <section class="pt-9 pt-md-15">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-7">
+        <h2
+          class="engFontPoppins h1 fwMedium d-flex flex-column flex-sm-column flex-md-row align-items-start align-items-md-center">
+          EVENT<span class="h5 d-inline-block ms-md-5 ms-0">活動課程</span></h2>
+        <a href="./eventlist.html" class="btn btn-outline-info rounded-pill engFontPoppins fwLighter py-2 px-6">View
+          more</a>
+      </div>
+      <div class="eventBody row row-cols-1 row-cols-md-3 g-4 g-md-7">
+        <div class="col">
+          <div class="card">
+            <a href="">
+              <div class="photoTransform"><img
+                  src="https://images.unsplash.com/photo-1559511331-6a3a4e72f588?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2747&q=80"
+                  class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h6 class="card-date">2020.10.21</h6>
+                <h6 class="card-subtitle">內政部</h6>
+                <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="">
+              <div class="photoTransform">
+                <img
+                  src="https://images.unsplash.com/photo-1543039717-b4d407223b4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2702&q=80"
+                  class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h6 class="card-date">2020.10.21</h6>
+                <h6 class="card-subtitle">文化部</h6>
+                <h5 class="card-title">國家文化記憶庫眷村與榮民主題專輔中心—人才培育課程(南區場)</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="">
+              <div class="photoTransform">
+                <img
+                  src="https://images.unsplash.com/photo-1567196884944-1b4b8f630560?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3432&q=80"
+                  class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h6 class="card-date">2020.10.21</h6>
+                <h6 class="card-subtitle">文化部</h6>
+                <h5 class="card-title">國家文化記憶庫眷村與榮民主題專輔中心—人才培育課程(東區場)</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.event -->
+  <!-- news -->
+  <section class="pt-4 pt-md-15">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-7">
+        <h2
+          class="engFontPoppins h1 fwMedium d-flex flex-column flex-sm-column flex-md-row align-items-start align-items-md-center">
+          NEWS<span class="h5 d-inline-block ms-md-5 ms-0">最新消息</span></h2>
+        <a href="./newslist.html" class="btn btn-outline-info rounded-pill engFontPoppins fwLighter py-2 px-6">View
+          more</a>
+      </div>
+      <div class="newsBody">
+        <a href="#">
+          <div class="d-flex borderM-Gray200 mt-2">
+            <div class="newsLeft">
+              <h6 class="card-date">2020.11<span class="d-block fwMedium h1">17</span></h6>
+            </div>
+            <div class="newsRight mb-4 mb-md-0">
+              <h6 class="card-subtitle">內政部</h6>
+              <div class="card-title">
+                <h5 class="animationLineBtn btn_underline">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="d-flex borderM-Gray200 mt-2">
+            <div class="newsLeft">
+              <h6 class="card-date">2020.11<span class="d-block fwMedium h1">12</span></h6>
+            </div>
+            <div class="newsRight mb-4 mb-md-0">
+              <h6 class="card-subtitle">內政部</h6>
+              <div class="card-title">
+                <h5 class="animationLineBtn btn_underline">1111 地政節 感謝各界地政人的用心及專業貢獻</h5>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="d-flex borderM-Gray200 mt-2">
+            <div class="newsLeft">
+              <h6 class="card-date">2020.11<span class="d-block fwMedium h1">09</span></h6>
+            </div>
+            <div class="newsRight mb-4 mb-md-0">
+              <h6 class="card-subtitle">國發會</h6>
+              <div class="card-title">
+                <h5 class="animationLineBtn btn_underline">2020 國土測繪圖GIS專題應用競賽活動</h5>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- /.news -->
+  <!-- blockLink -->
+  <section class="pt-4 pt-md-15">
+    <div class="container-fluid px-0">
+      <a href="https://colab.ngis.org.tw/ideas/geodigital_life" target="_blank" class="p-2 blackBlockLink">
+        <div class="d-block borderWhite20 py-6">
+          <h5>〈期刊〉<span class="engFontPoppins">GeoDigital Life</span> 空間數位生活</h5>
+          <p class="fwLighter">線上閱覽<span class="material-icons d-inline-block ms-2">
+              open_in_new
+            </span></p>
+        </div>
+      </a>
+      <div class="row row-cols-1 row-cols-md-3 g-0">
+        <a href="./contact.html" class="col blockBtn bgPrimary50">
+          <p><span class="material-icons md-36">
+              email
+            </span></p>
+          <h2 class="h1 engFontPoppins pt-2">Contact</h2>
+          <h5>聯絡我們</h5>
+        </a>
+        <a href="./recruit.html" class="col blockBtn bgPrimary60">
+          <p><span class="material-icons md-36">
+              person_search
+            </span></p>
+          <h2 class="h1 engFontPoppins pt-2">Recruit</h2>
+          <h5>人才招募</h5>
+        </a>
+        <a href="./tenderlist.html" class="col blockBtn bgPrimary70">
+          <p><span class="material-icons md-36">
+              business_center
+            </span></p>
+          <h2 class="h1 engFontPoppins pt-2">Tender</h2>
+          <h5>公開招標</h5>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- /.blockLink -->
+  <!-- footer -->
+  <footer class="bg-gray200 py-8">
+    <div class="container pb-6 border-bottom text-black20 position-relative">
+      <ul class="row row-cols-1 row-cols-md-5 g-md-6">
+        <li class="col d-flex d-md-block">
+          <a href="about.html" class="blackLink">
+            <h5>關於中心</h5>
+          </a>
+          <ul class="footerSecUl">
+            <a href="about.html#tgic">
+              <li>創立宗旨</li>
+            </a>
+            <a href="about.html#history">
+              <li>歷史沿革</li>
+            </a>
+            <a href="about.html#organization">
+              <li>組織架構</li>
+            </a>
+            <a href="">
+              <li>中心公告</li>
+            </a>
+          </ul>
+        </li>
+        <li class="col d-flex d-md-block">
+          <a href="gis.html" class="blackLink">
+            <h5><span class="engFontPoppins">GIS</span> 介紹</h5>
+          </a>
+          <ul class="footerSecUl">
+            <a href="gis.html#application">
+              <li><span class="engFontPoppins">GIS</span>應用</li>
+            </a>
+            <a href="gis.html#feature">
+              <li><span class="engFontPoppins">GIS</span>特色</li>
+            </a>
+            <a href="gis.html#trend">
+              <li><span class="engFontPoppins">GIS</span>發展趨勢</li>
+            </a>
+          </ul>
+        </li>
+        <li class="col d-flex d-md-block">
+          <a href="service.html" class="blackLink">
+            <h5>服務項目</h5>
+          </a>
+          <ul class="footerSecUl">
+            <a href="service.html#think">
+              <li>智庫幕僚</li>
+            </a>
+            <a href="service.html#talent">
+              <li>人才培育</li>
+            </a>
+            <a href="service.html#research">
+              <li>技術研發</li>
+            </a>
+            <a href="service.html#process">
+              <li>資料處理</li>
+            </a>
+          </ul>
+        </li>
+        <li class="col d-flex d-md-block">
+          <a href="portfoliolist.html" class="blackLink">
+            <h5>成果展示</h5>
+          </a>
+          <ul class="footerSecUl">
+            <a href="portfoliolist.html">
+              <li>資訊處理處</li>
+            </a>
+            <a href="portfoliolist.html">
+              <li>技術服務處</li>
+            </a>
+            <a href="portfoliolist.html">
+              <li>數位應用處</li>
+            </a>
+          </ul>
+        </li>
+        <li class="col d-flex d-md-block">
+          <a href="eventlist.html" class="blackLink">
+            <h5>活動課程</h5>
+          </a>
+          <ul class="footerSecUl">
+            <a href="eventlist.html">
+              <li>研討會活動</li>
+            </a>
+            <a href="eventlist.html">
+              <li>課程訊息</li>
+            </a>
+          </ul>
+        </li>
+        <li class="col d-flex d-md-block">
+          <a href="newslist.html" class="blackLink">
+            <h5>最新消息</h5>
+          </a>
+          <ul class="footerSecUl">
+            <a href="">
+              <li>新聞稿</li>
+            </a>
+            <a href="">
+              <li><span class="engFontPoppins">GIS</span>新知</li>
+            </a>
+          </ul>
+        </li>
+        <li class="col d-flex d-md-block">
+          <a href="contact.html" class="blackLink">
+            <h5>聯絡我們</h5>
+          </a>
+          <ul class="footerSecUl">
+            <a href="contact.html">
+              <li class="engFontPoppins">FAQ</li>
+            </a>
+            <a href="contact.html">
+              <li>聯絡表單</li>
+            </a>
+            <a href="#contact.html">
+              <li>廉潔檢舉信箱</li>
+            </a>
+          </ul>
+        </li>
+        <li class="col d-flex d-md-block">
+          <a href="recruit.html" class="blackLink">
+            <h5>人才招募</h5>
+          </a>
+          <ul class="footerSecUl">
+            <a href="recruit.html#benefits">
+              <li>福利制度</li>
+            </a>
+            <a href="recruit.html#process">
+              <li>招募流程</li>
+            </a>
+          </ul>
+        </li>
+        <li class="col d-flex d-md-block">
+          <a href="tenderlist.html" class="blackLink">
+            <h5>公開招標</h5>
+          </a>
+        </li>
+        <li class="col d-flex d-md-block">
+          <ul class="footerSecUl">
+            <a href="link.html">
+              <li>相關連結</li>
+            </a>
+            <a href="copyright.html">
+              <li>著作權保護</li>
+            </a>
+            <a href="">
+              <li>隱私權政策</li>
+            </a>
+            <a href="securityPolicy.html">
+              <li>資訊安全政策</li>
+            </a>
+          </ul>
+        </li>
+      </ul>
+      <a href="https://www.facebook.com/hitgic" target="_blank" class="footerFB"><img src="./assets/images/fbIcon.svg"
+          alt=""></a>
+    </div>
+    <div class="container engFontPoppins fwLighter pt-6">
+      <p class="pb-2">2022 財團法人台灣地理資訊中心 Copyright © . All Rights Reserved</p>
+      <p class="pb-2">台北市中正區羅斯福路一段七號六樓</p>
+      <p><span>TEL&nbsp;&nbsp;+886-2-2393-1122</span><span
+          class="d-inline-block ms-0 ms-md-3">FAX&nbsp;&nbsp;+886-2-2321-5954</span> </p>
+    </div>
+  </footer>
+  <!-- /.footer -->
+  <!-- js -->
+  <script>
+    // 主導覽RWD選單
+    $(document).ready(function () {
+      $('.showMenu').on('click', function (e) {
+        e.preventDefault();
+        $('.menuWrap').toggleClass('d-flex');
+        $('.menu').toggleClass('d-flex');
+        $('.iconLinkWrap').toggleClass('d-flex');
+      });
+    });
+
+    // 回到上方功能
+    $(function () {
+      // Amount of scrolling before button is shown/hidden.
+      var offset = 100;
+
+      // Fade duration
+      var duration = 500;
+
+      // Toggle view of button when scrolling.
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > offset) {
+          $('#c-go-top').fadeIn(duration);
+        } else {
+          $('#c-go-top').fadeOut(duration);
+        }
+      });
+
+      // Scroll to top when button is clicked.
+      $('#c-go-top').click(function (event) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: 0
+        }, duration);
+        return false;
+      });
+    });
+
+
+
+    //數字滾動
+    // https://codepen.io/tfoh/pen/LjZaGY
+    // countUp(參數1,參數2,參數3,參數4,參數5,參數6)
+    //參數1:數字所在容器（number1）,參數2(數字開始值),參數3(數字最終值),參數4（小數點後保留的位數）,參數5（數字特效時間3秒）,參數6（其他配置項目）
+    window.onload = function () {
+      var options = {
+        useEasing: true, //緩動特效
+        useGrouping: true, //使用分組（是否顯示千位分隔符，預設true)
+        separator: ',', //分隔符(預設,)
+        decimal: '.', //十進位(預設.)
+        prefix: '', //字首前綴（可訂＄等）
+        suffix: '' //字尾後綴（可定為元、個、美元）
+      };
+      var demo = new CountUp("number1", 0, 58, 0, 3, options);
+      demo.start();
+
+      var options1 = {
+        useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.',
+        prefix: '',
+        suffix: ''
+      };
+      var demo1 = new CountUp("number2", 0, 123, 0, 3, options1);
+      demo1.start();
+
+      var options2 = {
+        useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.',
+        prefix: '',
+        suffix: ''
+      };
+      var demo2 = new CountUp("number3", 0, 100, 0, 3, options2);
+      demo2.start();
+
+      var options3 = {
+        useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.',
+        prefix: '',
+        suffix: ''
+      };
+      var demo3 = new CountUp("number4", 0, 2311, 0, 3, options3);
+      demo3.start();
+
+      var options4 = {
+        useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.',
+        prefix: '',
+        suffix: ''
+      };
+      var demo4 = new CountUp("number5", 0, 333, 0, 3, options4);
+      demo4.start();
+
+      var options5 = {
+        useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.',
+        prefix: '',
+        suffix: ''
+      };
+      var demo5 = new CountUp("number6", 0, 1022, 0, 3, options5);
+      demo5.start();
+
+    }
+
+    //Affix Navbar 滑動固定主導覽在上方   When the user scrolls the page, execute myFunction
+    window.onscroll = function () {
+      myFunction()
+    };
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+
+</body>
+
+</html>

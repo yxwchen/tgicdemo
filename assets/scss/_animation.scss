@@ -1,0 +1,53 @@
+// 向下箭頭的動畫
+@keyframes bounce-down{
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce-down {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+// 首頁大圖位移動畫
+  @keyframes indexMove {
+    0% {
+      opacity: 0;
+      background-position: -500px -10px;
+    }
+    10%{
+      opacity: 1;
+
+    }
+    100% {
+      opacity: 1;
+      background-position: -550px -20px;
+    }
+  }
+
+  @keyframes indexMove-md {
+    0% {
+      opacity: 0;
+      background-position: -900px -10px;
+    }
+    10%{
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      background-position: -950px -20px;
+    }
+  }
+  
+// gis圖片輪播
+
+@keyframes gisSlideMove {
+  0%    { left: 0; }
+  100%  { left: -200%; }
+}

@@ -1,0 +1,214 @@
+// 手刻左灰右圖區塊1
+// .twoBlockWrap2 {
+//     display: flex;
+//     position: relative;
+//     @include device-md{
+//         position: static;
+//         flex-direction: column;
+//     }
+// }
+
+// .twoBlockStart2 {
+//     width: 62%;
+//     background-color: $gray-200;
+//     position: absolute;
+//     padding: 32px 0;
+//     padding-left: 100px;
+//     @include device-md{
+//         position: static;
+//         width: 100%;
+//     }
+//     @include device-sm{
+//         padding: 32px 16px;
+//     }
+// }
+
+// .twoBlockEnd2 {
+//     width: 38%;
+//     position: absolute;
+//     top: 20%;
+//     right: 10%;
+//     z-index: 10;
+//     @include device-lg{
+//         top:50%;
+//     }
+//     @include device-md{
+//         position: static;
+//         width: 100%;
+//         text-align: center;
+//         margin-top: -40px;
+//     }
+// }
+// 手刻左灰右圖區塊2 (因子元素高度沒抓到重寫)
+.twoBlockWrap2 {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    @include device-md {
+        position: static;
+        flex-direction: column;
+    }
+}
+
+.twoBlockStart2 {
+    width: 62%;
+    background-color: $gray-200;
+    position: relative;
+    float: left;
+    padding: 32px 0;
+    padding-left: 100px;
+
+    @include device-md {
+        position: static;
+        width: 100%;
+    }
+
+    @include device-sm {
+        padding: 32px 16px;
+    }
+}
+
+.twoBlockEnd2 {
+    width: 38%;
+    position: relative;
+    float: right;
+    // top: 20%;
+    padding-top: 60px;
+    right: 5%;
+    z-index: 10;
+
+    @include device-lg {
+        padding-top: 100px;
+    }
+
+    @include device-md {
+        position: static;
+        width: 100%;
+        text-align: center;
+        padding-top: 0;
+        margin-top: -40px;
+    }
+}
+
+// 服務項目的list樣式
+.ulStyle01 {
+    width: 80%;
+    @include device-lg {
+        width: 90%;
+    }
+    @include device-sm {
+        width: 100%;
+    }
+}
+
+.ulStyle01 li {
+    color: $info;
+    border: 1px solid #C3CDE0;
+    border-radius: 10px;
+    padding: 16px 8px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+//人才培育 膠囊背景
+.capsule1Bg {
+    max-width: 100vw;
+    height: 420px;
+    background: $light-green;
+    border-radius: 210px;
+    margin: 60px 40px 0 40px;
+
+    @include device-xl {
+        height: 360px;
+        border-radius: 180px;
+    }
+
+    @include device-lg {
+        height: 300px;
+        border-radius: 150px;
+    }
+
+    @include device-md {
+        height: 100%;
+        border-radius: 50% 50% 0 0;
+        margin: 40px 0 0 0;
+    }
+
+    @include device-sm {
+        border-radius: 60% 60% 0 0;
+    }
+}
+
+// 研發-開合選單
+// 關於我們時間軸開合
+.accordianWrap2 {
+    //padding-left: 100px;
+    padding-top: 40px;
+    border-top: 8px solid $primary;
+}
+
+.accordian2 {
+    background-color: transparent;
+    color: $white;
+    // border-top: 2px solid $primary;
+    //padding: 0 32px;
+    position: relative;
+    border-bottom: 1px solid #46659C;
+
+    .accordianTitle2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 0;
+        cursor: pointer;
+        
+    }
+
+    .accordianContent2 {
+        font-weight: 200;
+        padding: 24px 0;
+
+        .material-icons {
+            color: $white;
+            transition: .5s;
+        }
+
+    }
+}
+
+// .accordian2::before {
+//     //圓點
+//     content: "";
+//     position: absolute;
+//     top: -1%;
+//     left: -60px;
+//     margin: auto;
+//     width: 20px;
+//     height: 20px;
+//     border-radius: 50%;
+//     background-color: $white;
+//     border: 2px solid $primary;
+//     z-index: 10;
+//     @include device-sm{
+//         left: -30px;
+//     }
+
+// }
+
+.accordian::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background-color: $black;
+    top: 0;
+    bottom: 0;
+    left: -50px;
+
+    @include device-sm {
+        left: -20px;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+}

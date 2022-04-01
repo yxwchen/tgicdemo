@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS介紹-財團法人台灣地理資訊中心</title>
+    <link rel="stylesheet" href="./assets/scss/all.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- jQ -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- subNav 舊的寫法配.subNavLink 沒用到可刪除 -->
+    <!-- <div class="bgLightgreen border-bottom border-white">
+        <div class="container">
+            <div class="row row-cols-3 g-0">
+                <div class="col subNavLink border-start border-white"><a href="#application" class="active">GIS應用</a>
+                </div>
+                <div class="col subNavLink"><a href="#feature">GIS特色</a></div>
+                <div class="col subNavLink"><a href="#trend">GIS發展趨勢</a></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- /.subNav -->
+    <!-- banner -->
+    <div class="bannerWarp gisBn">
+        <div class="bnTextWrap text-center">
+            <h2 class="text-white engFontPoppins bannerFontSize">GIS</h2>
+            <h1 class="text-white h5">GIS 介紹</h1>
+        </div>
+    </div>
+    <!-- /.banner -->
+    <!-- GIS 應用 -->
+    <section id="application" class="pt-15 bg-gray200">
+        <div class="container">
+            <div class="pageTitle">
+                <div class="pageNumWrap">
+                    <p class="pageNum">01</p>
+                </div>
+                <h2 class="h1 engFontPoppins">GIS應用</h2>
+            </div>
+            <p class="fwLighter mb-9">近年來由於地理資訊系統 (Geographic Information System，GIS) 迅速發展，各領域開始運用 GIS
+                收集、管理和模擬空間資料，透過資訊化系統的建置及科學化分析，提升各類規劃管理工作，地理資訊系統已成為數位治理下重要的工具，如：</p>
+            <div class="row display-flex row-cols-1 row-cols-md-3 g-2 g-md-3 mb-9">
+                <div class="col bg-white">
+                    <div class="p-6 text-center bg-white">
+                        <img src="./assets/images/gisSvg1.svg" alt="">
+                        <p class="text-start pt-6 fwLighter">利用 GIS 系統來評估農業資源規劃，作為管理時決策參考，進而提高農作收益與永續經營。</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-6 text-center bg-white">
+                        <img src="./assets/images/gisSvg2.svg" alt="">
+                        <p class="text-start pt-6 fwLighter">
+                            公共設施(建設)服務水準評估，以發揮公共建設投資效益，強化公共設施服務效能，引導公共建設朝向安全、永續與淨零排放目標前進。</p>
+                    </div>
+                </div>
+                <div class="col bg-white">
+                    <div class="p-6 text-center bg-white">
+                        <img src="./assets/images/gisSvg3.svg" alt="">
+                        <p class="text-start pt-6 fwLighter">災害預防，如透過大規模水災規模情境模擬，精準掌握即時淹水預警，作為防災決策參考。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gisSlideWrap">
+            <div class="gisSlide"></div>
+        </div>
+    </section>
+    <!-- /.GIS 應用 -->
+    <!-- GIS 特色 -->
+    <section id="feature" class="pt-15">
+        <div class="container">
+            <div class="pageTitle">
+                <div class="pageNumWrap">
+                    <p class="pageNum">02</p>
+                </div>
+                <h2 class="h1 engFontPoppins">GIS特色</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-2 g-md-9 mb-9">
+                <div class="col text-center">
+                    <img src="./assets/images/gisPoint01.png" alt="">
+                    <p class="text-primary engFontRoboto fwLighter pt-6 pb-2">Point 01</p>
+                    <h5>地圖呈現</h5>
+                    <p class="pb-5 fwLighter">資訊視覺化</p>
+                    <p class="fwLighter text-start">除了表單以外，再搭配地理資訊系統或空間分析功能即可觀察、理解、詮釋各種時間空間分布的關係。</p>
+                </div>
+                <div class="col text-center">
+                    <img src="./assets/images/gisPoint02.png" alt="">
+                    <p class="text-primary engFontRoboto fwLighter pt-6 pb-2">Point 02</p>
+                    <h5>套疊分析</h5>
+                    <p class="pb-5 fwLighter">資訊空間關聯</p>
+                    <p class="fwLighter text-start">透過圖層( Layer )的概念，堆疊地理圖層，並運用交集、聯集、分併、切割等分析功能，進而了解多種地理特性的影響。</p>
+                </div>
+                <div class="col text-center">
+                    <img src="./assets/images/gisPoint03.png" alt="">
+                    <p class="text-primary engFontRoboto fwLighter pt-6 pb-2">Point 03</p>
+                    <h5>模擬與預測</h5>
+                    <p class="pb-5 fwLighter">資訊整合與決策</p>
+                    <p class="fwLighter text-start">藉由 GIS 將資料以模式處理後，可以發掘過去並預測未來的各種環境變動。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.GIS 特色 -->
+    <!-- GIS趨勢 -->
+    <section id="trend" class="bg-gradient-primaryY60 py-15">
+        <div class="container">
+            <div class="pageTitle mb-9">
+                <div class="pageNumWrap">
+                    <p class="pageNum2 text-white">03</p>
+                </div>
+                <h2 class="h1 engFontPoppins">GIS 發展趨勢</h2>
+            </div>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">民主化GIS</h5>
+                        <p class="card-text text-center">創新的資訊蒐集方式</p>
+                        <p class="card-text">
+                            從公眾參與地理資訊系統到自發性地理資訊，改變了傳統標準化GIS資料收集與資料庫的建置方式，透過自發性的公民行動來收集與建置資料，擴大=參與的層面，朝向民主化的境界。</p>
+                    </div>
+                    <img src="./assets/images/gisTrend01.png" alt="...">
+                </div>
+                <div class="card">
+
+                    <div class="card-body">
+                        <h5 class="card-title">生活應用</h5>
+                        <p class="card-text text-center">資訊智慧化應用</p>
+                        <p class="card-text">隨著智慧行動裝置普及，利用其位置感知能力，根據所在的位置，提供適地性服務，如輔助駕駛導航，地理資訊融入多樣化生活情境中。</p>
+                    </div>
+                    <img src="./assets/images/gisTrend02.png" alt="...">
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">智慧國土</h5>
+                        <p class="card-text text-center">數位轉型的關鍵</p>
+                        <p class="card-text">資通訊技術快速演進，引領下一波國土轉型的關鍵，以空間資訊為核心，並就治理、移動性、數據三面向，重塑國土形態可能性，進一步開啟未來國土的想像。</p>
+                    </div>
+                    <img src="./assets/images/gisTrend01.png" alt="...">
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- /.GIS趨勢 -->
+</body>
+
+</html>
