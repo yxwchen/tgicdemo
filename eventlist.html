@@ -13,17 +13,119 @@
 </head>
 
 <body>
-  <!-- subNav舊的寫法配.subNavLink 沒用到可刪除 -->
-  <!-- <div class="bgLightgreen border-bottom border-white">
-    <div class="container">
-      <div class="row row-cols-md-3 g-0">
-        <div class="col subNavLink border-start border-white"><a href="#" class="active">全部</a></div>
-        <div class="col subNavLink"><a href="#seminar">研討會活動</a></div>
-        <div class="col subNavLink"><a href="#course">課程訊息</a></div>
+  <!-- mainNav -->
+  <nav id="navbar" class="header">
+    <a href="index.html">
+      <h1>台灣地理資訊中心</h1>
+    </a>
+    <div class="menuWrap">
+      <ul class="menu">
+        <li><a href="about.html" class="mainLink">關於中心</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="about.html#tgic" class="subLink active">創立宗旨</a></li>
+              <li><a href="about.html#history" class="subLink">歷史沿革</a></li>
+              <li><a href="about.html#organization" class="subLink">組織架構</a></li>
+              <li><a href="./bulletin.html" class="subLink">中心公告</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="gis.html" class="mainLink"><span class="engFontPoppins">GIS</span>介紹</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="gis.html#application" class="subLink active">GIS應用</a></li>
+              <li><a href="gis.html#feature" class="subLink">GIS特色</a></li>
+              <li><a href="gis.html#trend" class="subLink">GIS發展趨勢</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="service.html" class="mainLink">服務項目</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="service.html#think" class="subLink active">智庫幕僚</a></li>
+              <li><a href="service.html#talent" class="subLink">人才培育</a></li>
+              <li><a href="service.html#research" class="subLink">技術研發</a></li>
+              <li><a href="service.html#process" class="subLink">資料處理</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="portfoliolist.html" class="mainLink">成果展示</a>
+          <div class="subNavWrap">
+            <ul class="subNavUl">
+              <li><a href="portfoliolist.html" class="subLink active">全部</a></li>
+              <li><a href="portfoliolist.html" class="subLink">數位應用處</a></li>
+              <li><a href="portfoliolist.html" class="subLink">空間資訊處</a></li>
+              <li><a href="portfoliolist.html" class="subLink">技術服務處</a></li>
+              <li><a href="portfoliolist.html" class="subLink">政策發展處</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="eventlist.html" class="mainLink">活動課程</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="eventlist.html" class="subLink active">全部</a></li>
+              <li><a href="eventlist.html" class="subLink">研討會活動</a></li>
+              <li><a href="eventlist.html" class="subLink">課程訊息</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="newslist.html" class="mainLink">最新消息</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="eventlist.html" class="subLink active">全部</a></li>
+              <li><a href="eventlist.html" class="subLink">新聞稿</a></li>
+              <li><a href="eventlist.html" class="subLink">GIS新知</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="contact.html" class="mainLink">聯絡我們</a>
+          <div class="subNavWrap d-none">
+            <ul class="subNavUl">
+              <li><a href="contact.html" class="subLink active">FAQ</a></li>
+              <li><a href="contact.html" class="subLink">聯絡表單</a></li>
+              <li><a href="contact.html" class="subLink">廉潔檢舉信箱</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="me-0 me-xl-2">
+          <button type="button" class="btn btnPrimary fwLighter rounded-pill w90px">人才招幕</button>
+        </li>
+        <li><button type="button" class="btn btnSecondary fwLighter rounded-pill w90px">公開招標</button></li>
+      </ul>
+      <div class="iconLinkWrap">
+        <div>
+          <a class="infoLink px-2 engFontPoppins" href="">English</a>
+          <a class="infoLink px-2" href="https://www.facebook.com/hitgic" target="_blank"><svg
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+            </svg></a>
+        </div>
+        <div class="inputWrap d-xl-none d-xxl-none">
+          <input type="text" class="inputStyle w-75 d-block d-xl-none" placeholder="地方創生">
+          <div>
+            <a href="#"><span class="material-icons">
+                close
+              </span></a>
+            <a href="#"><img src="./assets/images/arrow.svg" alt=""></a>
+          </div>
+        </div>
+
+        <a class="infoLink px-2 d-none d-xl-inline-block" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></a>
       </div>
     </div>
-  </div> -->
-  <!-- /.subNav -->
+    <a class="showMenu infoLink">
+      <span class="material-icons md-36">
+        menu
+      </span>
+    </a>
+  </nav>
+  <!-- /.mainNav -->
   <!-- banner -->
   <div class="bannerWarp eventBn">
     <div class="bnTextWrap text-center">
@@ -33,112 +135,113 @@
   </div>
   <!-- /.banner -->
   <!-- 內容 -->
-<section class="pt-9 pt-md-15">
-  <div class="container">
-    <h5 class="text-center text-primary pb-12">全部</h5>
-    <div class="eventBody row row-cols-1 row-cols-md-3 g-md-7 g-4">
-      <div class="col">
-        <div class="card">
-          <a href="./event.html">
-            <div class="photoTransform"><img
-              src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
-              class="card-img-top" alt="..."></div>
-            <div class="card-body">
-              <h6 class="card-date">2020.10.21</h6>
-              <h6 class="card-subtitle">內政部</h6>
-              <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
-            </div>
-          </a>
+  <section class="pt-9 pt-md-15">
+    <div class="container">
+      <h5 class="text-center text-primary pb-12">全部</h5>
+      <div class="eventBody row row-cols-1 row-cols-md-3 g-md-7 g-4">
+        <div class="col">
+          <div class="card">
+            <a href="./event.html">
+              <div class="photoTransform"><img
+                  src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
+                  class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h6 class="card-date">2020.10.21</h6>
+                <h6 class="card-subtitle">內政部</h6>
+                <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="">
+              <div class="photoTransform"><img
+                  src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
+                  class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h6 class="card-date">2020.10.21</h6>
+                <h6 class="card-subtitle">內政部</h6>
+                <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="">
+              <div class="photoTransform"><img
+                  src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
+                  class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h6 class="card-date">2020.10.21</h6>
+                <h6 class="card-subtitle">內政部</h6>
+                <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="">
+              <div class="photoTransform"><img
+                  src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
+                  class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h6 class="card-date">2020.10.21</h6>
+                <h6 class="card-subtitle">內政部</h6>
+                <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="">
+              <div class="photoTransform"><img
+                  src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
+                  class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h6 class="card-date">2020.10.21</h6>
+                <h6 class="card-subtitle">內政部</h6>
+                <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="">
+              <div class="photoTransform"><img
+                  src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
+                  class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h6 class="card-date">2020.10.21</h6>
+                <h6 class="card-subtitle">內政部</h6>
+                <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card">
-          <a href="">
-            <div class="photoTransform"><img
-              src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
-              class="card-img-top" alt="..."></div>
-            <div class="card-body">
-              <h6 class="card-date">2020.10.21</h6>
-              <h6 class="card-subtitle">內政部</h6>
-              <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <a href="">
-            <div class="photoTransform"><img
-              src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
-              class="card-img-top" alt="..."></div>
-            <div class="card-body">
-              <h6 class="card-date">2020.10.21</h6>
-              <h6 class="card-subtitle">內政部</h6>
-              <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <a href="">
-            <div class="photoTransform"><img
-              src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
-              class="card-img-top" alt="..."></div>
-            <div class="card-body">
-              <h6 class="card-date">2020.10.21</h6>
-              <h6 class="card-subtitle">內政部</h6>
-              <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <a href="">
-            <div class="photoTransform"><img
-              src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
-              class="card-img-top" alt="..."></div>
-            <div class="card-body">
-              <h6 class="card-date">2020.10.21</h6>
-              <h6 class="card-subtitle">內政部</h6>
-              <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <a href="">
-            <div class="photoTransform"><img
-              src="https://media.istockphoto.com/photos/map-app-in-mobile-phone-to-search-location-or-navigate-to-destination-picture-id1318463913?k=20&m=1318463913&s=612x612&w=0&h=LSYyLa93xzNnLZFR451NdMzDawvhSD2LNwkrqOpkLuI="
-              class="card-img-top" alt="..."></div>
-            <div class="card-body">
-              <h6 class="card-date">2020.10.21</h6>
-              <h6 class="card-subtitle">內政部</h6>
-              <h5 class="card-title">內政部落實智慧國土計畫暨空間測繪技術發表會</h5>
-            </div>
-          </a>
-        </div>
-      </div>
+      <nav class="customPagination py-10">
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a class="page-link active" href="#"><span class="material-icons">
+                navigate_before
+              </span>Previous</a></li>
+          <li class="page-item"><a class="page-link active" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">...</a></li>
+          <li class="page-item"><a class="page-link" href="#">14</a></li>
+          <li class="page-item"><a class="page-link active" href="#">Next<span class="material-icons">
+                navigate_next
+              </span></a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="customPagination py-10">
-      <ul class="pagination justify-content-center">
-        <li class="page-item"><a class="page-link active" href="#"><span class="material-icons">
-          navigate_before
-          </span>Previous</a></li>
-        <li class="page-item"><a class="page-link active" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">...</a></li>
-        <li class="page-item"><a class="page-link" href="#">14</a></li>
-        <li class="page-item"><a class="page-link active" href="#">Next<span class="material-icons">
-          navigate_next
-          </span></a></li>
-      </ul>
-    </nav>
-  </div>
-</section>
+  </section>
   <!-- /.內容 -->
 </body>
+
 </html>

@@ -71,7 +71,7 @@
     -webkit-animation: bounce-down 1s infinite alternate;
 }
 
-// ===========首頁三圈圈區塊元件===========
+// ===========首頁三圈圈區塊元件-舊===========
 .circleWrap {
     display: flex;
     justify-content: center;
@@ -149,6 +149,102 @@
         display: none;
     }
 }
+// ===========首頁三圈圈區塊元件-重構0407===========
+.round {
+    position: relative;
+    // width: 50%;
+    min-width: 530px;
+    width: 530px;
+    height: 530px;
+    z-index: 10;
+
+    background: #EaEBF080;
+    color: $black;
+    padding: 3%;
+    margin: 0 -15px;
+    border-radius: 50%;
+    text-align: center;
+
+    @include device-xl {
+        padding-top: 60px;
+        min-width: 450px;
+        width: 450px;
+        height: 450px;
+    }
+
+    @include device-lg {
+        padding-top: 60px;
+        min-width: 400px;
+        width: 400px;
+        height: 400px;
+    }
+
+    @include device-sm {
+        padding-top: 40px;
+        min-width: 350px;
+        width: 350px;
+        height: 350px;
+    }
+    @include device-xs {
+        padding-top: 40px;
+        min-width: 300px;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.roundData {
+    font-size: $font-size-lg;
+    position: absolute;
+}
+
+.roundCenter {
+    width: 100%;
+    left: 0;
+}
+.roundSM{
+    background: #EaEBF080;
+    min-width: 300px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding-top: 60px;
+
+    @include device-xl {
+        padding-top: 10%;
+        min-width: 280px;
+        width: 280px;
+        height: 280px;
+    }
+
+    @include device-lg {
+        padding-top: 5%;
+        min-width: 215px;
+        width: 215px;
+        height: 215px;
+    }
+
+    @include device-md {
+        display: none;
+    }
+}
+
+.roundLeft {
+    transform: translate(-100%, -20%);
+}
+
+.roundRight {
+    transform: translate(140%, -20%);
+    @include device-xxl {
+        transform: translate(150%, -20%);
+    }
+    @include device-xl {
+        transform: translate(135%, -20%);
+    }
+    @include device-lg {
+        transform: translate(160%, -20%);
+    }
+}
 
 // ===========首頁 portfolioWrap 裡面的card設定===========
 .portfolioWrap {
@@ -181,7 +277,7 @@
 }
 
 .portfolioBody .card-subtitle {
-    font-weight: 200;
+    font-weight: 300;
     font-size: $font-size-sm;
     opacity: 0.5;
     color: $white;
@@ -206,7 +302,7 @@
 
     .card-text {
         color: $white;
-        font-weight: 200;
+        font-weight: 300;
         height: 100px;
     }
 
@@ -280,7 +376,7 @@
     }
 
     .card-subtitle {
-        font-weight: 200;
+        font-weight: 300;
         margin: 10px 0;
         font-size: 16;
     }
@@ -363,7 +459,7 @@
 .newsBody .card-subtitle {
     flex: 1 1 0%;
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
 
     @include device-sm {
         padding-left: 20px;
@@ -414,7 +510,7 @@
     li {
         padding-bottom: 4px;
         font-size: $font-size-sm;
-        font-weight: 200;
+        font-weight: 300;
 
         @include device-md {
             display: inline-block;
@@ -715,7 +811,7 @@ footer h5 {
     p {
         display: inline-block;
         color: $black;
-        font-weight: 200;
+        font-weight: 300;
 
     }
 }
@@ -888,7 +984,7 @@ footer h5 {
     }
 
     .card-text {
-        font-weight: 200;
+        font-weight: 300;
         padding-bottom: 30px;
     }
 }

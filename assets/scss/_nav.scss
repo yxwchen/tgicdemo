@@ -43,7 +43,7 @@
 .menu {
     display: flex;
     align-items: center;
-    font-weight: 200;
+    font-weight: 300;
 
     .mainLink {
         padding: 8px;
@@ -73,12 +73,16 @@
 
             &:hover {
                 color: $info;
+                .subNavWrap {
+                    display: block;
+                }
             }
         }
 
         button {
             margin: 12px;
-            @include device-sm{
+
+            @include device-sm {
                 margin: 4px;
             }
         }
@@ -123,7 +127,8 @@
     height: 40px;
 
     //預設hide
-    //display: none;
+    display: none;
+
     @include device-xl {
         position: static;
         height: auto;
@@ -201,7 +206,7 @@
 //     a {
 //         display: inline-block;
 //         color: $black;
-//         font-weight: 200;
+//         font-weight: 300;
 //         transition: all 0.8s ease;
 
 //     }
